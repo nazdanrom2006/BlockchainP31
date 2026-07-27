@@ -1,18 +1,23 @@
 using BlockchainP.Models;
+using BlockchainP.Services;
 namespace BlockchainP.Services{
 	public class BlockChainService{
 		public List<Block> Chain{get; set;}
 		private readonly HashingService _hashingService;
+		private readonly MiningService _miningService;
+
+		public int Difficulty {get; set;} = 4;
 
 		public BlockChainService(){
 			_hashingService = new HashingService();
+			_miningService = new MiningService(_hashingService);
 			Chain = new List<Block>();
 			CreateGenesisBlock();
 		}
 		private void CreateGenesisBlock(){
 			var genesisBlock = new Block(0, "Blockchain", "Genesis block", string.Empty, DateTime.UtcNow);
 
-			genesisBlock.Hash = _hashingService.ComputeHash(genesisBlock);
+			_miningService.MineBlock(genesisBlock, Difficulty);
 			Chain.Add(genesisBlock);
 		}
 		public void AddBlock(string author, string data){
@@ -21,7 +26,7 @@ namespace BlockchainP.Services{
 			var newTimeStamp = DateTime.UtcNow;
 			var newPrevHash = prevBlock.Hash;
 			var newBlock = new Block(newIndex, author, data, newPrevHash, newTimeStamp);
-			newBlock.Hash = _hashingService.ComputeHash(newBlock);
+			_miningService.MineBlock(newBlock, Difficulty);
 			Chain.Add(newBlock);
 		}
 		public bool IsValid(){
@@ -32,6 +37,9 @@ namespace BlockchainP.Services{
 					return false;
 				}
 				if (currentBlock.PrevHash != prevBlock.Hash){
+					return false;
+				}
+				if (!currentBlock.Hash.StartsWith(new string('0', Difficulty))){
 					return false;
 				}
 			}

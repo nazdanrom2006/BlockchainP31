@@ -6,6 +6,7 @@ namespace BlockchainP.Models {
 		public string Hash{ get; set; }
 		public string PrevHash{ get; set; }
 		public DateTime TimeStamp{ get; set; }
+		public int Nonce { get; set; }
 
 		public Block(int id, string author, string data, string prevHash, DateTime timeStamp){
 			Id = id;
@@ -13,6 +14,8 @@ namespace BlockchainP.Models {
 			Data = data;
 			PrevHash = prevHash;
 			TimeStamp = timeStamp;
+			Nonce = 0;
+			
 		}
 	}
 }

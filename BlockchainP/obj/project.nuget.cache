@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u9iM/WrhikYul2MKWwkJj8wdChxD74E/BguK+fTZj7gLnThcXk81eeIrXF1ltsAW77PIeZ2CcMD6jM6joynmpw==",
+  "dgSpecHash": "BymNDuA7Oj0zqj4ZfJPR6HWye4gODnicHxO5BV6N6CrvArZAUZstM2UN3zCEn3FSbQbAWqqRvn3jvaMvx4R5Zg==",
   "success": true,
-  "projectFilePath": "/home/danylo/blockchain/BlockchainP/BlockchainP.csproj",
+  "projectFilePath": "/home/danylo/blockchain/BlockchainP31/BlockchainP/BlockchainP.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

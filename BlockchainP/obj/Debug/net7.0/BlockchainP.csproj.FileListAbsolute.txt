@@ -12,3 +12,17 @@
 /home/danylo/blockchain/BlockchainP/obj/Debug/net7.0/BlockchainP.pdb
 /home/danylo/blockchain/BlockchainP/obj/Debug/net7.0/BlockchainP.genruntimeconfig.cache
 /home/danylo/blockchain/BlockchainP/obj/Debug/net7.0/ref/BlockchainP.dll
+/home/danylo/blockchain/BlockchainP31/BlockchainP/obj/Debug/net7.0/BlockchainP.GeneratedMSBuildEditorConfig.editorconfig
+/home/danylo/blockchain/BlockchainP31/BlockchainP/obj/Debug/net7.0/BlockchainP.AssemblyInfoInputs.cache
+/home/danylo/blockchain/BlockchainP31/BlockchainP/obj/Debug/net7.0/BlockchainP.AssemblyInfo.cs
+/home/danylo/blockchain/BlockchainP31/BlockchainP/obj/Debug/net7.0/BlockchainP.csproj.CoreCompileInputs.cache
+/home/danylo/blockchain/BlockchainP31/BlockchainP/obj/Debug/net7.0/BlockchainP.dll
+/home/danylo/blockchain/BlockchainP31/BlockchainP/obj/Debug/net7.0/refint/BlockchainP.dll
+/home/danylo/blockchain/BlockchainP31/BlockchainP/obj/Debug/net7.0/BlockchainP.pdb
+/home/danylo/blockchain/BlockchainP31/BlockchainP/bin/Debug/net7.0/BlockchainP
+/home/danylo/blockchain/BlockchainP31/BlockchainP/bin/Debug/net7.0/BlockchainP.deps.json
+/home/danylo/blockchain/BlockchainP31/BlockchainP/bin/Debug/net7.0/BlockchainP.runtimeconfig.json
+/home/danylo/blockchain/BlockchainP31/BlockchainP/bin/Debug/net7.0/BlockchainP.dll
+/home/danylo/blockchain/BlockchainP31/BlockchainP/bin/Debug/net7.0/BlockchainP.pdb
+/home/danylo/blockchain/BlockchainP31/BlockchainP/obj/Debug/net7.0/BlockchainP.genruntimeconfig.cache
+/home/danylo/blockchain/BlockchainP31/BlockchainP/obj/Debug/net7.0/ref/BlockchainP.dll

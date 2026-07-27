@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BlockchainP
-build_property.ProjectDir = /home/danylo/blockchain/BlockchainP/
+build_property.ProjectDir = /home/danylo/blockchain/BlockchainP31/BlockchainP/

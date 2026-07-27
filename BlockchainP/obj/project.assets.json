@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/danylo/blockchain/BlockchainP/BlockchainP.csproj",
+      "projectUniqueName": "/home/danylo/blockchain/BlockchainP31/BlockchainP/BlockchainP.csproj",
       "projectName": "BlockchainP",
-      "projectPath": "/home/danylo/blockchain/BlockchainP/BlockchainP.csproj",
+      "projectPath": "/home/danylo/blockchain/BlockchainP31/BlockchainP/BlockchainP.csproj",
       "packagesPath": "/home/danylo/.nuget/packages/",
-      "outputPath": "/home/danylo/blockchain/BlockchainP/obj/",
+      "outputPath": "/home/danylo/blockchain/BlockchainP31/BlockchainP/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/danylo/.nuget/NuGet/NuGet.Config"
