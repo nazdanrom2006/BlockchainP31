@@ -7,15 +7,17 @@ namespace BlockchainP.Models {
 		public string PrevHash{ get; set; }
 		public DateTime TimeStamp{ get; set; }
 		public int Nonce { get; set; }
+		public int Difficulty { get; set; }
+		public double MiningDuration { get; set; }
 
-		public Block(int id, string author, string data, string prevHash, DateTime timeStamp){
+		public Block(int id, string author, string data, string prevHash, DateTime timeStamp, int difficulty){
 			Id = id;
 			Author = author;
 			Data = data;
 			PrevHash = prevHash;
 			TimeStamp = timeStamp;
 			Nonce = 0;
-			
+			Difficulty = difficulty;
 		}
 	}
 }

@@ -13,6 +13,8 @@ namespace BlockchainP.Services{
 				Console.WriteLine($"Hash: {block.Hash}");
 				Console.WriteLine($"Previous hash: {block.PrevHash}");
 				Console.WriteLine($"Nonce: {block.Nonce}");
+				Console.WriteLine($"Difficulty: {block.Difficulty}");
+				Console.WriteLine($"Elapsed time: {block.MiningDuration} ms");
 				Console.WriteLine(new string('-', 50));
 			}
 		}
