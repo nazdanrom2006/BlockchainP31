@@ -15,6 +15,7 @@ namespace BlockChain_P.Services{
                 Console.WriteLine($"Previous Hash: {block.PrevHash}");
                 Console.WriteLine($"Nonce: {block.Nonce}");
                 Console.WriteLine($"Difficulty: {block.Difficulty}");
+                Console.WriteLine($"Merkle Root: {block.MerkleRoot}");
 
                 Console.WriteLine("Transanctions:");
                 ShowTransactions(block.Transactions);

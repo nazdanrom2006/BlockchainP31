@@ -8,8 +8,7 @@ namespace BlockChain_P.Services{
     {
         public string ComputeHash(Block block)
         {
-            string transactionsRow = string.Concat(block.Transactions.Select(t => t.ToRowString()));
-            var input = $"{block.Index}{block.TimeStamp.ToString("o")}{transactionsRow}{block.PrevHash}{block.Nonce}{block.Difficulty}";
+            var input = $"{block.Index}{block.TimeStamp.ToString("o")}{block.MerkleRoot}{block.PrevHash}{block.Nonce}{block.Difficulty}";
             return ComputeHash(input);
         }
 

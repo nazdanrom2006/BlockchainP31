@@ -54,8 +54,10 @@ while (!exit)
     Console.WriteLine("8. Exit");
     Console.WriteLine("9. Await Network Block");
     Console.WriteLine("9.1. Await Network Transaction");
+    Console.WriteLine("9.2. Await Network BlockChain");
     Console.WriteLine("10. Send Network Block");
     Console.WriteLine("10.1. Send Network Transation");
+    Console.WriteLine("10.2. Send Network BlockChain");
 
     string choice = Console.ReadLine();
 

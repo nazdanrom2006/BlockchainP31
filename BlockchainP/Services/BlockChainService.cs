@@ -31,7 +31,7 @@ namespace BlockChain_P.Services{
         }
 
         private void CreateGenesisBlock(){
-            var genesisBlock = new Block(0, DateTime.UnixEpoch, new List<Transaction>(), string.Empty, Difficulty);
+            var genesisBlock = new Block(0, DateTime.UnixEpoch, new List<Transaction>(), string.Empty, Difficulty, string.Empty);
 
             _miningService.MineBlock(genesisBlock, Difficulty);
             Chain.Add(genesisBlock);
@@ -83,12 +83,12 @@ namespace BlockChain_P.Services{
                 pendingBalances[transaction.From] -= transaction.Amount;
             }*/
             var transactionCopy = pendingTransactions.OrderByDescending(t => t.Fee).Take(_maxBlockSize).ToList();
+            
 
             var prevBlock = Chain.Last();
             var newIndex = prevBlock.Index + 1;
             var newTimeStamp = DateTime.UtcNow;
             var newPrevHash = prevBlock.Hash;
-            var newBlock = new Block(newIndex, newTimeStamp, transactionCopy, newPrevHash, Difficulty);
 
 
             var totalFee = transactionCopy.Sum(t => t.Fee);
@@ -101,6 +101,9 @@ namespace BlockChain_P.Services{
                 TimeStamp = DateTime.UtcNow
             };
             transactionCopy.Add(transactionReward);
+
+            string MerkleRoot = CalculateMerkleRoot(transactionCopy);
+            var newBlock = new Block(newIndex, newTimeStamp, transactionCopy, newPrevHash, Difficulty, MerkleRoot);
 
             _miningService.MineBlock(newBlock, Difficulty);
             Chain.Add(newBlock);
@@ -145,7 +148,7 @@ namespace BlockChain_P.Services{
                             Console.WriteLine("Wrong prev hash");
                     return false;
                 }
-                if(!currentBlock.Hash.StartsWith(new String('0', Difficulty))){
+                if(!currentBlock.Hash.StartsWith(new String('0', currentBlock.Difficulty))){
                             Console.WriteLine("Wrong POW");
                     return false;
                 }
@@ -156,6 +159,10 @@ namespace BlockChain_P.Services{
                 }
                 if(currentBlock.TimeStamp.CompareTo(DateTime.UtcNow.AddMinutes(2)) > 0){
                     Console.WriteLine("Block from future");
+                    return false;
+                }
+                if (currentBlock.MerkleRoot != CalculateMerkleRoot(currentBlock.Transactions)){
+                    Console.WriteLine("Invalid Merkle Root");
                     return false;
                 }
             }
@@ -240,6 +247,9 @@ namespace BlockChain_P.Services{
                     pendingTransactions.Remove(transaction);
                 }
             }
+            if (block.MerkleRoot != CalculateMerkleRoot(block.Transactions)){
+                return (false, $"Invalid Merkle Root: Expected {CalculateMerkleRoot(block.Transactions)}, Actual: {block.MerkleRoot}");
+            }
             Chain.Add(block);
             return (true, "Block is valid and accepted");
         }
@@ -252,6 +262,20 @@ namespace BlockChain_P.Services{
             }
             Chain = blockChain.Chain;
             return (true, "BlockChain Accepted");
+        }
+        public string CalculateMerkleRoot(List<Transaction> transactions){
+            List<string> MerkleTree = new List<string>();
+            foreach (var transaction in transactions){
+                MerkleTree.Add(_hashingService.ComputeHash(transaction.ToString()));
+            }
+            while (MerkleTree.Count() != 1){
+                List<string> newMerkleTree = new List<string>();
+                for (int i = 0; i < MerkleTree.Count(); i += 2){
+                    newMerkleTree.Add(_hashingService.ComputeHash(MerkleTree[i] + MerkleTree[i + 1]));
+                }
+                MerkleTree = newMerkleTree;
+            }
+            return MerkleTree[0];
         }
     }
 }

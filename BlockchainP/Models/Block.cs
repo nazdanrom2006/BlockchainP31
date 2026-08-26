@@ -14,12 +14,14 @@ namespace BlockChain_P.Models{
 		public double MiningDuration{ get; set; }
 
 		public int Difficulty { get; set; }
-        public Block(int index, DateTime timeStamp, List<Transaction> transactions, string prevHash, int difficulty){
+        public string MerkleRoot { get; set; }
+        public Block(int index, DateTime timeStamp, List<Transaction> transactions, string prevHash, int difficulty, string merkleRoot){
             Index = index;
             TimeStamp = timeStamp;
             Transactions = transactions;
             PrevHash = prevHash;
             Difficulty = difficulty;
+            MerkleRoot = merkleRoot;
         }
         public Block() { }
     }
