@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/home/danylo/blockchain/BlockchainP31/BlockchainP/BlockchainP.csproj": {}
+    "/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/BlockchainP.csproj": {}
   },
   "projects": {
-    "/home/danylo/blockchain/BlockchainP31/BlockchainP/BlockchainP.csproj": {
+    "/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/BlockchainP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/danylo/blockchain/BlockchainP31/BlockchainP/BlockchainP.csproj",
+        "projectUniqueName": "/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/BlockchainP.csproj",
         "projectName": "BlockchainP",
-        "projectPath": "/home/danylo/blockchain/BlockchainP31/BlockchainP/BlockchainP.csproj",
+        "projectPath": "/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/BlockchainP.csproj",
         "packagesPath": "/home/danylo/.nuget/packages/",
-        "outputPath": "/home/danylo/blockchain/BlockchainP31/BlockchainP/obj/",
+        "outputPath": "/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/danylo/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -32,11 +32,17 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "imports": [
             "net461",
             "net462",
@@ -48,12 +54,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.30, 8.0.30]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[8.0.30, 8.0.30]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.30, 8.0.30]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/.dotnet/sdk/7.0.410/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.111/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

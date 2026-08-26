@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "BymNDuA7Oj0zqj4ZfJPR6HWye4gODnicHxO5BV6N6CrvArZAUZstM2UN3zCEn3FSbQbAWqqRvn3jvaMvx4R5Zg==",
+  "dgSpecHash": "tLgn5tZD5R4=",
   "success": true,
-  "projectFilePath": "/home/danylo/blockchain/BlockchainP31/BlockchainP/BlockchainP.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/BlockchainP.csproj",
+  "expectedPackageFiles": [
+    "/home/danylo/.nuget/packages/microsoft.netcore.app.ref/8.0.30/microsoft.netcore.app.ref.8.0.30.nupkg.sha512",
+    "/home/danylo/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.30/microsoft.aspnetcore.app.ref.8.0.30.nupkg.sha512",
+    "/home/danylo/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.30/microsoft.netcore.app.host.linux-x64.8.0.30.nupkg.sha512"
+  ],
   "logs": []
 }

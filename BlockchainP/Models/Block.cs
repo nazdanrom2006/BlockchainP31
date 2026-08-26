@@ -1,23 +1,26 @@
-namespace BlockchainP.Models {
-	public class Block{
-		public int Id{ get; set; }
-		public string Author {get; set;}
-		public string Data{ get; set; }
-		public string Hash{ get; set; }
-		public string PrevHash{ get; set; }
-		public DateTime TimeStamp{ get; set; }
-		public int Nonce { get; set; }
-		public int Difficulty { get; set; }
-		public double MiningDuration { get; set; }
+using System;
+using System.Numerics;
+using BlockChain_P.Models;
+namespace BlockChain_P.Models{
+	public class Block
+	{
+		public int Index {get; set;}
+	public DateTime TimeStamp { get; set; }
+        public List<Transaction> Transactions { get; set; } = new List<Transaction>();
+        public string Hash { get; set; }
+		public string PrevHash { get; set; }
+		public long Nonce { get; set; }
 
-		public Block(int id, string author, string data, string prevHash, DateTime timeStamp, int difficulty){
-			Id = id;
-			Author = author;
-			Data = data;
-			PrevHash = prevHash;
-			TimeStamp = timeStamp;
-			Nonce = 0;
-			Difficulty = difficulty;
-		}
-	}
+		public double MiningDuration{ get; set; }
+
+		public int Difficulty { get; set; }
+        public Block(int index, DateTime timeStamp, List<Transaction> transactions, string prevHash, int difficulty){
+            Index = index;
+            TimeStamp = timeStamp;
+            Transactions = transactions;
+            PrevHash = prevHash;
+            Difficulty = difficulty;
+        }
+        public Block() { }
+    }
 }

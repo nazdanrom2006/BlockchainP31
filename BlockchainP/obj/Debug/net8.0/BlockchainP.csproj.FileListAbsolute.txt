@@ -1,0 +1,15 @@
+/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/bin/Debug/net8.0/BlockchainP
+/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/bin/Debug/net8.0/BlockchainP.deps.json
+/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/bin/Debug/net8.0/BlockchainP.runtimeconfig.json
+/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/bin/Debug/net8.0/BlockchainP.dll
+/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/bin/Debug/net8.0/BlockchainP.pdb
+/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/obj/Debug/net8.0/BlockchainP.GeneratedMSBuildEditorConfig.editorconfig
+/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/obj/Debug/net8.0/BlockchainP.AssemblyInfoInputs.cache
+/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/obj/Debug/net8.0/BlockchainP.AssemblyInfo.cs
+/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/obj/Debug/net8.0/BlockchainP.csproj.CoreCompileInputs.cache
+/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/obj/Debug/net8.0/BlockchainP.sourcelink.json
+/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/obj/Debug/net8.0/BlockchainP.dll
+/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/obj/Debug/net8.0/refint/BlockchainP.dll
+/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/obj/Debug/net8.0/BlockchainP.pdb
+/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/obj/Debug/net8.0/BlockchainP.genruntimeconfig.cache
+/home/danylo/Документи/coding/step/blockchain/BlockchainP31/BlockchainP/obj/Debug/net8.0/ref/BlockchainP.dll
